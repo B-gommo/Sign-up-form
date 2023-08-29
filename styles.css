@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    font-weight: normal;
+    border: 5px dotted green;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
