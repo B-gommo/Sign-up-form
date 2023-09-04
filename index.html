@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="./scripts.js" defer></script>
     <title>Sign Up Form</title>
 </head>
 
@@ -15,7 +16,7 @@
     <div id="left">
         <div>
             <h1>Sail Away</h1>
-            <img src="./resources/boatlogo.PNG" alt="Sail boat Logo">
+            <img id="logo" src="./resources/boatlogo.PNG" alt="Sail boat Logo">
         </div>
         <p>Photo by <a
                 href="https://unsplash.com/@niklas_hamann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Niklas
@@ -27,7 +28,7 @@
         <h2>This is not a real online service! You know you want to sail away from it all.<br>So join us now to realize
             your dreams.<br>Sign up <em>now</em> to get started.<br><br>You <em>know</em> you want to.</h2>
         <div id="form">
-            <form action="">
+            <form id="formId" action="">
                 <fieldset>
                     <legend>Lets do this!</legend>
                     <div id="formsplit">
@@ -62,7 +63,7 @@
                     </div>
 
                 </fieldset>
-                <button type="submit">Create Account</button>
+                <button id="submitBTN" type="submit">Create Account</button>
             </form>
         </div>
 

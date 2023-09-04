@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Concert one', cursive;
 }
 
 h1 {
@@ -10,6 +10,11 @@ h1 {
     font-size: 3rem;
     font-weight: normal;
     font-family: 'Sedgwick Ave Display', cursive;
+}
+
+h2 {
+    line-height: 1.7rem;
+    font-weight: 500;
 }
 
 #left div {
@@ -71,6 +76,8 @@ a:hover {
 fieldset {
     border: none;
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Concert One', cursive;
 }
 
 form {
@@ -86,7 +93,9 @@ label, input {
 }
 
 label {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    height: 20px;
+    font-family: 'Concert One', cursive
 }
 
 input {
@@ -94,6 +103,7 @@ input {
     border-radius: 5px;
     height: 1.5rem;
     width: 300px;
+    line-height: 1.5rem;
 }
 
 input:focus {
@@ -103,6 +113,10 @@ input:focus {
 
 .error {
     border: 1px solid red;
+}
+
+.match {
+    border: 1px solid green;
 }
 
 #formsplit {
