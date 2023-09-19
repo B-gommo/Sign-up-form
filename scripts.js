@@ -1,4 +1,4 @@
-/* Submit button events */
+/* Submit button events and reset button creation*/
 
 const submitBtn = document.getElementById('submitBTN');
 
@@ -28,6 +28,10 @@ function checkValid() {
 function sailHome() {
     const logo = document.getElementById('logo');
     logo.style.transform = 'translate(0px, 0px)';
+    const checks = document.querySelectorAll('.checkMark');
+    checks.forEach((check) => {
+        check.remove();
+    })
     setTimeout(() => {
         this.remove();
       }, 1);
@@ -51,7 +55,6 @@ password.addEventListener("input", checkPassword);
 confirmPassword.addEventListener("input", checkPassword);
 
 function checkPassword() {
-    console.log('event fired');
 
     if (password.value != confirmPassword.value) {
         password.classList.add('error');
@@ -66,6 +69,28 @@ function checkPassword() {
     }
 }
 
+/* validation check mark */
 
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach((input) => {
+    input.addEventListener('input', (e) => {
+    if(input.checkValidity()) {
+        if(input.nextSibling) {
+            input.nextSibling.remove();
+        }
+        const checkMark = document.createElement('span');
+        checkMark.classList.add("checkMark");
+        checkMark.innerText = "✓";
+        checkMark.style = "color:green; position:absolute; right:0px; top:17px;"
+        input.insertAdjacentElement('afterend', checkMark);
+        console.log("we got something");
+    }else {
+        console.log("still something")
+        if(input.nextSibling) {
+            input.nextSibling.remove();
+        }
+    }})
+})
 
 
