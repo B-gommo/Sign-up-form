@@ -1,6 +1,8 @@
 /* Submit button events */
 
-const SubmitBtn = document.getElementById('submitBTN').addEventListener("click", checkValid);
+const submitBtn = document.getElementById('submitBTN');
+
+submitBtn.addEventListener("click", checkValid);
 
 function checkValid() {
     const inputs = document.querySelectorAll('input');
@@ -8,13 +10,27 @@ function checkValid() {
     inputs.forEach((input) => {
         if (input.checkValidity()) {
             validCount++;
-            console.log(validCount);
         }
     })
     if (validCount == 6) {
         const logo = document.getElementById('logo');
         logo.style.transform = 'translate(300px, 0px)';
+        const resetBtn = document.createElement("button");
+        resetBtn.setAttribute('type', 'reset');
+        resetBtn.innerText = "Reset / Sail it home!";
+        resetBtn.style.marginLeft = "1.5rem";
+        submitBtn.insertAdjacentElement('afterend', resetBtn);
+        resetBtn.addEventListener('click', sailHome);
+
     }
+}
+
+function sailHome() {
+    const logo = document.getElementById('logo');
+    logo.style.transform = 'translate(0px, 0px)';
+    setTimeout(() => {
+        this.remove();
+      }, 1);
 }
 
 var form = document.getElementById('formId');
